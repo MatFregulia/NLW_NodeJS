@@ -26,7 +26,6 @@ class AuthenticateUserService {
 
     // 123456 / 783645734-sdhfhsdf7762374234234
     const passwordMatch = await compare(password, user.password);
-    console.log(passwordMatch );
     if (!passwordMatch) {
       throw new Error("Email/Password incorrect");
     }
